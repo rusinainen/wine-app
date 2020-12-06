@@ -1,0 +1,12 @@
+{
+  "name": "wine-app",
+  "displayName": "wine-app",
+  "expo": {
+    "name": "wine-app",
+    "slug": "wine-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
