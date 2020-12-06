@@ -1,10 +1,3 @@
- Install instuction for depencies:
-  yarn add @react-navigation/native
-	expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
-	yarn add @react-navigation/stack
-	yarn add @react-navigation/bottom-tabs
-  yarn add react-native-elements
-  
   <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
@@ -120,7 +113,11 @@ This is an example of how to list things you need to use the software and how to
    ```
 2. Install NPM packages
    ```sh
-   npm install
+    yarn add @react-navigation/native
+    expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+    yarn add @react-navigation/stack
+    yarn add @react-navigation/bottom-tabs
+    yarn add react-native-elements
    ```
 
 
