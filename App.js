@@ -1,17 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, Button, Link} from 'react-native';
-//Navigation
+//Navigation is impoerted underneath
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, HeaderBackButton } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-//Components under here
+//Components imported underneath
 import Start from './components/Start';
 import ListView from './components/ListView';
 import AddReview from './components/AddReview';
-
-
+import ProductView from './components/ProductView';
+//import ProfileView from './components/ProfileView';
+//import LoginPage from './components/LoginPage';
 
 //Creates a stack navigator for our front page/starting page
 const StartStack = createStackNavigator();
@@ -25,7 +26,7 @@ function StartStackScreen() {
     );
 }
 
-// Creates a stack naviagtor for our page that lists product reviews
+// Creates a stack for our page that lists product reviews
 const WineListStack = createStackNavigator();
 
 function ListStackScreen() {
@@ -36,7 +37,7 @@ function ListStackScreen() {
     );
 }
 
-// Creates a stack naviagtor for our page that lets user add a new review
+// Creates a stack for our page that lets user add a new review
 const AddStack = createStackNavigator();
 
 function AddStackScreen() {
@@ -44,6 +45,17 @@ function AddStackScreen() {
     <AddStack.Navigator>
       <AddStack.Screen name="Add a new review" component={AddReview} />
     </AddStack.Navigator>
+    );
+}
+
+// Creates a stack for our page that lets user see details of the wine product
+const WineStack = createStackNavigator();
+
+function WineStackScreen() {
+  return (
+    <WineStack.Navigator>
+      <WineStack.Screen name="Wine" component={ProductView} />
+    </WineStack.Navigator>
     );
 }
 
@@ -56,7 +68,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <NavigationContainer>
         <Tab.Navigator>
-          <Tab.Screen name="New review" component={AddStackScreen}
+          <Tab.Screen name="New" component={AddStackScreen}
             options={{
             tabBarLabel: 'New',
             tabBarIcon: ({ color }) => (
@@ -78,6 +90,14 @@ export default function App() {
               tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="format-list-bulleted" color={color} size={26} />
               ),
+            }}
+          />
+          <Tab.Screen name="Wine" component={WineStackScreen}
+            options={{
+            tabBarLabel: 'Product Details',
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="food" color={color} size={26} />
+            ),
             }}
           />
         </Tab.Navigator>

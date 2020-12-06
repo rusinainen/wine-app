@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ListView from './ListView';
 
-export default function ProductView() {
+export default function ProductView({route, params}) {
+   const { id } = route.params;
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <Text>Product id is {JSON.stringify(id)}</Text>
     </View>
   );
 }

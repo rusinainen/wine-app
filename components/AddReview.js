@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function LoginPage() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Moi</Text>
       <StatusBar style="auto" />
     </View>
   );

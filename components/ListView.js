@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList, ActivityIndicator, Text, View, StyleSheet, Image, Button } from 'react-native';
 import { ListItem, Header } from 'react-native-elements';
-//
+ import AddReview from './AddReview';
 
 export default class ListView extends React.Component {
 
@@ -52,7 +52,14 @@ export default class ListView extends React.Component {
                   <ListItem.Content>
                     <ListItem.Title style={styles.item}>{item.product_name}</ListItem.Title>
                     <ListItem.Subtitle>{item.quantity}</ListItem.Subtitle>
-                   </ListItem.Content>
+                  </ListItem.Content>
+                  <Button onPress={() => {
+                    this.props.navigation.navigate('Wine', {
+                      screen: 'Wine',
+                      params: { id : item.id },
+                    })
+                    }}
+                    title="Details"/>
               </ListItem>
             )}
           />
