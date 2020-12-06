@@ -109,9 +109,9 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/rusinainen/wine-app.git
    ```
-2. Install NPM packages
+2. Add depencies with yarn
    ```sh
     yarn add @react-navigation/native
     expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
