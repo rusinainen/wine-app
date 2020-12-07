@@ -43,7 +43,7 @@ const AddStack = createStackNavigator();
 function AddStackScreen() {
   return (
     <AddStack.Navigator>
-      <AddStack.Screen name="Add a new review" component={AddReview} />
+      <AddStack.Screen name="New product review" component={AddReview} />
     </AddStack.Navigator>
     );
 }
@@ -68,9 +68,9 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <NavigationContainer>
         <Tab.Navigator>
-          <Tab.Screen name="New" component={AddStackScreen}
+          <Tab.Screen name='New' component={AddStackScreen}
             options={{
-            tabBarLabel: 'New',
+            tabBarLabel: 'Add',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="plus" color={color} size={26} />
             ),

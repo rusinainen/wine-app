@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Alert, StyleSheet, Text, View, Button, Input, FlatList } from 'react-native';
 import { ListItem, Image, Avatar } from 'react-native-elements';
 
+
 const info = [
   {
+    id: 1,
     name: 'Zinfandel Rosé',
     image_url: 'https://static.openfoodfacts.org/images/products/430/449/326/1525/front_fr.16.400.jpg',
     code: '4304493261525',
@@ -23,7 +25,6 @@ const rating = [
 ]
 
 export default function ProductView() {
-
 return(
 <View style={styles.container}>
       {
@@ -37,7 +38,16 @@ return(
                 />
                 <ListItem.Subtitle>{l.code}{"\n"}{l.brands}{"\n"}{l.categories}</ListItem.Subtitle>
               </ListItem.Content>
-              <Image source={l.image_url} />
+              <Button onPress={() => {
+                this.props.navigation.navigate('New', {
+                  screen: 'New',
+                  params: {
+                     id : l.code
+                   },
+                 });
+                }}
+                title="New review"
+              />
           </ListItem>
         ))
       }
@@ -52,7 +62,7 @@ return(
               </ListItem.Content>
             </ListItem>
           ))
-      }
+          }
     </View>
   </View>
   );
