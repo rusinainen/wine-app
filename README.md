@@ -60,6 +60,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+This will be updated soon.. 
+
 
 ### Technologies used in the making of this app:
 
@@ -67,6 +69,7 @@
 * []()
 * []()
 
+This will be updated soon.. 
 
 
 <!-- GETTING STARTED -->
@@ -103,10 +106,7 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
+This will be updated soon.. 
 
 <!-- LICENSE -->
 ## License
