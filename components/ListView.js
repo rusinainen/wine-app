@@ -1,6 +1,6 @@
 import React from 'react';
-import { FlatList, ActivityIndicator, Text, View, StyleSheet, Image, Button } from 'react-native';
-import { ListItem, Header } from 'react-native-elements';
+import { FlatList, ActivityIndicator, Text, View, StyleSheet, Button } from 'react-native';
+import { ListItem, Header, Image } from 'react-native-elements';
  import AddReview from './AddReview';
 
 export default class ListView extends React.Component {
@@ -56,9 +56,11 @@ export default class ListView extends React.Component {
                   <Button onPress={() => {
                     this.props.navigation.navigate('Wine', {
                       screen: 'Wine',
-                      params: { id : item.id },
-                    })
-                    }}
+                      params: {
+                         id : item.id
+                       },
+                    });
+                  }}
                     title="Details"/>
               </ListItem>
             )}

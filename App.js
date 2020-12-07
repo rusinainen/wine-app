@@ -76,7 +76,7 @@ export default function App() {
             ),
             }}
           />
-          <Tab.Screen name="Main page" component={StartStackScreen}
+          <Tab.Screen name="Start" component={StartStackScreen}
             options={{
             tabBarLabel: 'Start',
             tabBarIcon: ({ color }) => (
